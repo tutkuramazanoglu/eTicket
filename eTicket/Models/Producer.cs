@@ -10,8 +10,11 @@ namespace eTicket.Models
     {
         [Key]
         public int ProducerID { get; set; }
+        [Display(Name = "Producer's Photo")]
         public string ProducerProfilePictureURL { get; set; }
+        [Display(Name = "Producer's Full Name")]
         public string ProducerFullName { get; set; }
+        [Display(Name = "Producer's Bio")]
         public string ProducerBio { get; set; }
 
         //Relationship

@@ -8,18 +8,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace eTicket.Controllers
 {
-    public class ActorsController : Controller
+    public class ProducersController : Controller
     {
         private readonly AppDbContext _context;
 
-        public ActorsController(AppDbContext context)
+        public ProducersController(AppDbContext context)
         {
             _context = context;
         }
         public async Task<IActionResult> Index()
         {
-            var allActors = await _context.Actors.ToListAsync();
-            return View(allActors);
+            var allProducers = await _context.Producers.ToListAsync();
+            return View(allProducers);
         }
     }
 }

@@ -10,8 +10,11 @@ namespace eTicket.Models
     {
         [Key]
         public int CinemaID { get; set; }
+        [Display(Name ="Logo")]
         public string LogoURL { get; set; }
+        [Display(Name = "Cinema Name")]
         public string CinemaName { get; set; }
+        [Display(Name = "Description")]
         public string CinemaDescription{ get; set; }
 
         //Relationships
