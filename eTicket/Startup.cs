@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using eTicket.Data;
+using eTicket.Data.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,6 +30,9 @@ namespace eTicket
             //Dbcontext config
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString
                   ("DefaultConnectionString")));
+
+            //Services Config
+            services.AddScoped<IActorsService, ActorService>();
 
             services.AddControllersWithViews();
         }
